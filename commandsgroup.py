@@ -25,10 +25,6 @@ class CommandsGroup(commands.Cog):
         content = self.message.content
         embed = discord.Embed(
             title=f"Message from {author}", description=content, timestamp=datetime.utcnow())
-        embed.add_field(name="line 1", value="content for line 1", inline=True)
-        embed.set_author(
-            name=author, icon_url="https://cdn.discordapp.com/emojis/754736642761424986.png")
-        embed.set_footer(text="this is a footer")
         await ctx.send(embed=embed)
 
     @commands.command("ping")
